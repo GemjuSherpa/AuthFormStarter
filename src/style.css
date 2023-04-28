@@ -1,6 +1,6 @@
 :root {
-  --primary: #E11D48;
-  --primary-dark: #C32345;
+  --primary: #1de193;
+  --primary-dark: #0e5f1b;
   --gray: #9CA3AF;
   --light: #F3F4F6;
   --dark: #111827;
@@ -32,6 +32,6 @@ input {
   padding: 0.5ren;
   padding-right: calc(0.5rem - 5px);
   border: 2px solid #fff;
-  color: #ffff;
+  color: black;
   margin-bottom: 1.5rem;
 }
