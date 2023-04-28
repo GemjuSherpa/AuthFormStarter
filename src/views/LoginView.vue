@@ -1,8 +1,22 @@
 <script setup>
 import {ref} from 'vue'
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 
 const email = ref('')
 const password = ref('')
+
+const Login = () =>{
+    if(!email.value || !password.value){
+        alert("please enter email and password")
+        return
+    }
+
+    alert("No user databases are set up to store login, therefore you are not logged in.")
+    router.push('/')
+}
+
 </script>
 
 <template>
@@ -14,7 +28,7 @@ const password = ref('')
             <p>login or create an account to start using the Auth app</p>
         </header>
 
-        <form @submit.prevent="">
+        <form @submit.prevent="Login">
             <label>
                 <span>Enter your email</span>
                 <input type="email" v-model="email" placeholder="test@test.com">
